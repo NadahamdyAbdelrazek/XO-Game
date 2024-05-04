@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:untitled1/Calculator_Screen.dart';
+
+import 'home/X0_Screen.dart';
+import 'home/login.dart';
 
 
 void main() {
@@ -10,7 +12,11 @@ class MyApp extends StatelessWidget{
   Widget build(BuildContext context) {
     return MaterialApp(debugShowCheckedModeBanner: false,
       title: "Flutter",
-      home: CalculatorScreen(),
+      initialRoute: login.routename,
+      routes: {
+        login.routename:(context) =>login(),
+        XoGame.routename:(context) => XoGame(),
+      },
     );
 
   }
